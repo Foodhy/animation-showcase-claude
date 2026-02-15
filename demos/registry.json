@@ -1,0 +1,222 @@
+[
+  {
+    "id": "01-scroll-story",
+    "title": "Smooth Scroll Story",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "lenis", "scrolltrigger"],
+    "difficulty": "intermediate",
+    "description": "Parallax sections with Lenis smooth scrolling and GSAP ScrollTrigger choreography.",
+    "bundler": "vite"
+  },
+  {
+    "id": "02-horizontal-gallery",
+    "title": "Horizontal Scroll Gallery",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "lenis", "scrolltrigger"],
+    "difficulty": "intermediate",
+    "description": "Vertical scroll drives a horizontal gallery with pinned container and panel entrance animations.",
+    "bundler": "vite"
+  },
+  {
+    "id": "03-text-reveal",
+    "title": "Text Reveal on Scroll",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "splittext", "scrolltrigger"],
+    "difficulty": "intermediate",
+    "description": "Per-character and per-line text animations triggered on scroll with GSAP SplitText.",
+    "bundler": "vite"
+  },
+  {
+    "id": "04-pinned-timeline",
+    "title": "Pinned Scroll Sections",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "pin"],
+    "difficulty": "intermediate",
+    "description": "Sections pin in place while multi-step timelines play, driven entirely by scroll position.",
+    "bundler": "vite"
+  },
+  {
+    "id": "05-card-stack",
+    "title": "Card Stack Cascade",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "perspective"],
+    "difficulty": "intermediate",
+    "description": "Stacked cards fan out and rearrange into a grid as you scroll, driven by GSAP ScrollTrigger scrub.",
+    "bundler": "vite"
+  },
+  {
+    "id": "06-scroll-progress",
+    "title": "Scroll Progress Indicators",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "lenis", "scrolltrigger", "svg"],
+    "difficulty": "beginner",
+    "description": "Three simultaneous scroll indicators: top bar, circular SVG progress, and section dot navigator.",
+    "bundler": "vite"
+  },
+  {
+    "id": "07-particle-tunnel",
+    "title": "Particle Tunnel",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "shaders", "postprocessing"],
+    "difficulty": "advanced",
+    "description": "Cinematic depth-heavy particle tunnel with custom shaders and bloom post-processing.",
+    "bundler": "vite"
+  },
+  {
+    "id": "08-product-showcase",
+    "title": "3D Product Showcase",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "pbr-material", "orbit"],
+    "difficulty": "intermediate",
+    "description": "Interactive 3D product viewer with PBR materials, three-point lighting, and orbit controls.",
+    "bundler": "vite"
+  },
+  {
+    "id": "09-shader-bg",
+    "title": "Shader Background",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "glsl", "simplex-noise"],
+    "difficulty": "advanced",
+    "description": "Full-screen GLSL fragment shader with layered simplex noise creating flowing aurora bands.",
+    "bundler": "vite"
+  },
+  {
+    "id": "10-interactive-3d",
+    "title": "Interactive 3D Mouse Scene",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "instanced-mesh", "raycaster"],
+    "difficulty": "advanced",
+    "description": "Grid of 400 spheres with mouse-reactive repulsion physics, spring return, and distance-based color.",
+    "bundler": "vite"
+  },
+  {
+    "id": "11-card-detail-transition",
+    "title": "Card Grid Transition",
+    "category": "transitions",
+    "status": "ready",
+    "tech": ["view-transitions-api", "css"],
+    "difficulty": "intermediate",
+    "description": "Shared-element transition from a card grid to a detail page using the View Transitions API.",
+    "bundler": "static"
+  },
+  {
+    "id": "12-page-routing",
+    "title": "Page Routing Transitions",
+    "category": "transitions",
+    "status": "ready",
+    "tech": ["view-transitions-api", "spa-routing"],
+    "difficulty": "intermediate",
+    "description": "SPA-style page routing with directional slide transitions using the View Transitions API.",
+    "bundler": "static"
+  },
+  {
+    "id": "13-theme-transition",
+    "title": "Theme Transition",
+    "category": "transitions",
+    "status": "ready",
+    "tech": ["view-transitions-api", "clip-path"],
+    "difficulty": "intermediate",
+    "description": "Dark/light theme toggle with circular clip-path wipe powered by the View Transitions API.",
+    "bundler": "static"
+  },
+  {
+    "id": "14-image-gallery-vt",
+    "title": "Image Gallery Transitions",
+    "category": "transitions",
+    "status": "ready",
+    "tech": ["view-transitions-api", "crossfade"],
+    "difficulty": "beginner",
+    "description": "Thumbnail strip with hero image swap animated by View Transitions crossfade and scale.",
+    "bundler": "static"
+  },
+  {
+    "id": "15-bokeh-particles",
+    "title": "Bokeh Particle Hero",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["canvas-2d", "vanilla-js"],
+    "difficulty": "beginner",
+    "description": "Ambient glowing bokeh particle field with mouse-reactive parallax and depth-of-field blur.",
+    "bundler": "static"
+  },
+  {
+    "id": "16-magnetic-cursor",
+    "title": "Magnetic Cursor",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["vanilla-js", "spring-physics"],
+    "difficulty": "intermediate",
+    "description": "Custom cursor with spring-based following and magnetic attraction to interactive elements.",
+    "bundler": "static"
+  },
+  {
+    "id": "17-spotlight-reveal",
+    "title": "Spotlight Reveal",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["css-mask", "mouse-tracking"],
+    "difficulty": "intermediate",
+    "description": "Mouse-driven spotlight that reveals colorful hidden content through a dark overlay using CSS masks.",
+    "bundler": "static"
+  },
+  {
+    "id": "18-noise-grain",
+    "title": "Noise & Grain Overlay",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["svg-filter", "canvas", "css"],
+    "difficulty": "beginner",
+    "description": "Four composited overlay effects: SVG noise filter, canvas grain, CSS scanlines, and radial vignette.",
+    "bundler": "static"
+  },
+  {
+    "id": "19-staggered-grid",
+    "title": "Staggered Grid Entrance",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["intersection-observer", "css-keyframes"],
+    "difficulty": "beginner",
+    "description": "Grid items animate in with position-based stagger delays. Multiple animation styles: fade, scale, slide, flip.",
+    "bundler": "static"
+  },
+  {
+    "id": "20-morphing-blobs",
+    "title": "Morphing Blobs",
+    "category": "css-canvas",
+    "status": "ready",
+    "tech": ["css-border-radius", "svg-path", "canvas-bezier"],
+    "difficulty": "beginner",
+    "description": "Three approaches to organic shape animation: CSS border-radius, SVG path morphing, and Canvas bezier curves.",
+    "bundler": "static"
+  },
+  {
+    "id": "21-scroll-camera-narrative",
+    "title": "Scroll Camera Narrative",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "gsap", "lenis", "scrolltrigger"],
+    "difficulty": "advanced",
+    "description": "Scroll through story chapters as the camera flies between 3D scene waypoints with cinematic transitions.",
+    "bundler": "vite"
+  },
+  {
+    "id": "22-product-spotlight",
+    "title": "3D Product Spotlight",
+    "category": "3d",
+    "status": "ready",
+    "tech": ["three.js", "gsap", "lenis", "scrolltrigger"],
+    "difficulty": "advanced",
+    "description": "Scroll-driven camera orbits a 3D product on rails, revealing feature cards at each angle.",
+    "bundler": "vite"
+  }
+]

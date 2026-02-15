@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Product Spotlight — libs-genclaude</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/shared/demo-shell.css">
+</head>
+<body>
+  <!-- Three.js canvas (fixed behind everything) -->
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <!-- Scroll track drives the camera rail -->
+  <div class="scroll-track">
+
+    <section class="rail-section" data-section="0">
+      <div class="info-card card-left">
+        <span class="card-label">01 — Design</span>
+        <h2>Precision Geometry</h2>
+        <p>Mathematical elegance expressed through parametric curves. Every vertex placed with purpose.</p>
+      </div>
+    </section>
+
+    <section class="rail-section" data-section="1">
+      <div class="info-card card-right">
+        <span class="card-label">02 — Material</span>
+        <h2>Physical Rendering</h2>
+        <p>Metallic clearcoat finish with physically-based reflections. Light behaves as it does in reality.</p>
+      </div>
+    </section>
+
+    <section class="rail-section" data-section="2">
+      <div class="info-card card-left">
+        <span class="card-label">03 — Lighting</span>
+        <h2>Cinematic Depth</h2>
+        <p>Three-point lighting sculpts form from shadow. Key, fill, and rim lights create dramatic dimension.</p>
+      </div>
+    </section>
+
+    <section class="rail-section" data-section="3">
+      <div class="info-card card-right">
+        <span class="card-label">04 — Detail</span>
+        <h2>Every Angle</h2>
+        <p>Scroll reveals new reflections and color interplay. No two perspectives are the same.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Orbit progress bar -->
+  <div class="orbit-progress">
+    <div class="orbit-progress-fill" id="orbit-fill"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

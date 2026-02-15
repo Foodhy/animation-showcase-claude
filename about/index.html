@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — libs-genclaude</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #070a12;
+      --panel: #121a2b;
+      --border: #263249;
+      --text: #f0f4fb;
+      --muted: #8a95a8;
+      --accent: #86e8ff;
+      --accent-warm: #ffcc66;
+      --neon-pink: #ff40d6;
+      --neon-purple: #ae52ff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Top nav */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 2rem;
+      background: rgba(7, 10, 18, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.7; }
+
+    .top-bar-title {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* Page layout */
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* Tab nav */
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font: 600 0.85rem/1 'Inter', system-ui, sans-serif;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Content sections */
+    .hero-block {
+      margin-bottom: 3rem;
+    }
+
+    .hero-block h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--accent), var(--neon-purple), var(--neon-pink));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-block .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 540px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(174, 82, 255, 0.12);
+      border: 1px solid rgba(174, 82, 255, 0.25);
+      color: var(--neon-purple);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section h2 .icon {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: rgba(134, 232, 255, 0.1);
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    .section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    .section p, .section li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .section ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .section li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      background: rgba(134, 232, 255, 0.05);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 0.5rem 0.8rem;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(38, 50, 73, 0.4);
+    }
+
+    td strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    tr:hover td { background: rgba(134, 232, 255, 0.02); }
+
+    /* Code blocks */
+    .code-block {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 0.75rem 0;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .code-block code {
+      color: var(--accent);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .code-block .kw { color: var(--neon-purple); }
+    .code-block .str { color: var(--accent-warm); }
+    .code-block .cm { color: var(--muted); }
+    .code-block .fn { color: var(--neon-pink); }
+
+    /* Project structure tree */
+    .tree {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+    .tree .dir { color: var(--accent); }
+    .tree .file { color: var(--text); }
+    .tree .comment { color: var(--muted); font-style: italic; }
+
+    /* Category tags */
+    .cat-tag {
+      display: inline-block;
+      padding: 0.12rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .cat-tag.scroll { background: rgba(134,232,255,0.12); color: var(--accent); }
+    .cat-tag.three-d { background: rgba(174,82,255,0.15); color: var(--neon-purple); }
+    .cat-tag.transitions { background: rgba(255,204,102,0.15); color: var(--accent-warm); }
+    .cat-tag.css-canvas { background: rgba(255,64,214,0.12); color: var(--neon-pink); }
+
+    /* Dividers */
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Model card */
+    .model-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .model-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem;
+      background: linear-gradient(135deg, var(--accent), var(--neon-purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .model-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .model-card ul {
+      padding-left: 1.2rem;
+      margin: 0.75rem 0;
+    }
+
+    .model-card li {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .model-card li strong { color: var(--text); }
+
+    /* Links */
+    a:not(.back-link):not(.tab-btn) {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:not(.back-link):not(.tab-btn):hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page { padding: 2rem 1rem 4rem; }
+      .top-bar { padding: 0.8rem 1rem; }
+      .tab-btn { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-bar">
+    <a href="/" class="back-link">&larr; Gallery</a>
+    <span class="top-bar-title">libs-genclaude</span>
+  </nav>
+
+  <main class="page">
+
+    <div class="hero-block">
+      <h1>About This Project</h1>
+      <p class="tagline">A curated gallery of 22 web animation demos covering scroll choreography, 3D/WebGL scenes, View Transitions, and CSS/Canvas effects.</p>
+      <div class="badge">Built entirely by Claude Opus 4.6</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="readme">README</button>
+      <button class="tab-btn" data-tab="skill">Skill &amp; Patterns</button>
+    </div>
+
+    <!-- README Tab -->
+    <div class="tab-content active" id="tab-readme">
+
+      <div class="section">
+        <h2><span class="icon">&#9881;</span> Tech Stack</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Technology</th><th>Version</th><th>Role</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Vite</strong></td><td>6.1</td><td>Dev server + bundler for complex demos</td></tr>
+              <tr><td><strong>GSAP</strong></td><td>3.12</td><td>Scroll-driven animations, timelines, SplitText</td></tr>
+              <tr><td><strong>Lenis</strong></td><td>1.1</td><td>Smooth scrolling, integrated with GSAP ticker</td></tr>
+              <tr><td><strong>Three.js</strong></td><td>0.171</td><td>3D scenes, shaders, post-processing (bloom)</td></tr>
+              <tr><td><strong>View Transitions API</strong></td><td>Native</td><td>Page transitions, shared-element morphs</td></tr>
+              <tr><td><strong>Canvas 2D</strong></td><td>Native</td><td>Particle systems, grain, bokeh effects</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#128193;</span> Architecture</h2>
+        <p>This project uses a <strong style="color:var(--text)">hybrid Vite/static approach</strong>:</p>
+        <ul>
+          <li><strong style="color:var(--text)">Vite-bundled demos (12)</strong> &mdash; Have a <code>.vite-demo</code> marker file. Use <code>import</code> for npm packages. Auto-discovered by <code>vite.config.js</code>.</li>
+          <li><strong style="color:var(--text)">Static demos (10)</strong> &mdash; Pure HTML/CSS/JS with no build step. Served as-is by Vite's dev server.</li>
+        </ul>
+
+        <div class="tree">
+<span class="dir">libs-genclaude/</span>
+&#9500;&#9472;&#9472; <span class="file">index.html</span> <span class="comment"># Gallery hub</span>
+&#9500;&#9472;&#9472; <span class="file">package.json</span> <span class="comment"># Vite + gsap + lenis + three</span>
+&#9500;&#9472;&#9472; <span class="file">vite.config.js</span> <span class="comment"># Multi-page auto-discovery</span>
+&#9500;&#9472;&#9472; <span class="dir">shared/</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="file">a11y.js</span> <span class="comment"># Reduced-motion detection + toggle</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="file">colors.js</span> <span class="comment"># Dark palette tokens</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="file">motion-tokens.js</span> <span class="comment"># GSAP presets</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="file">demo-shell.js</span> <span class="comment"># Back-link, toggle, info bar</span>
+&#9474;&nbsp;&nbsp; &#9492;&#9472;&#9472; <span class="file">demo-shell.css</span>
+&#9500;&#9472;&#9472; <span class="dir">demos/</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="file">registry.json</span> <span class="comment"># Metadata for 22 demos</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; <span class="dir">01-scroll-story/</span> <span class="comment"># Each: index.html + main.js + styles.css</span>
+&#9474;&nbsp;&nbsp; &#9500;&#9472;&#9472; ...
+&#9474;&nbsp;&nbsp; &#9492;&#9472;&#9472; <span class="dir">22-product-spotlight/</span>
+&#9492;&#9472;&#9472; <span class="dir">about/</span> <span class="comment"># This page</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#127916;</span> All 22 Demos</h2>
+
+        <h3><span class="cat-tag scroll">Scroll</span> Scroll Animations (6)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Demo</th><th>Tech</th><th>Bundler</th></tr></thead>
+            <tbody>
+              <tr><td>01</td><td><strong>Smooth Scroll Story</strong></td><td>GSAP, Lenis, ScrollTrigger</td><td>Vite</td></tr>
+              <tr><td>02</td><td><strong>Horizontal Scroll Gallery</strong></td><td>GSAP, Lenis, ScrollTrigger</td><td>Vite</td></tr>
+              <tr><td>03</td><td><strong>Text Reveal on Scroll</strong></td><td>GSAP, SplitText, ScrollTrigger</td><td>Vite</td></tr>
+              <tr><td>04</td><td><strong>Pinned Scroll Sections</strong></td><td>GSAP, ScrollTrigger, Pin</td><td>Vite</td></tr>
+              <tr><td>05</td><td><strong>Card Stack Cascade</strong></td><td>GSAP, ScrollTrigger, Perspective</td><td>Vite</td></tr>
+              <tr><td>06</td><td><strong>Scroll Progress Indicators</strong></td><td>GSAP, Lenis, SVG</td><td>Vite</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3><span class="cat-tag three-d">3D</span> 3D / WebGL (6)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Demo</th><th>Tech</th><th>Bundler</th></tr></thead>
+            <tbody>
+              <tr><td>07</td><td><strong>Particle Tunnel</strong></td><td>Three.js, Custom Shaders, Bloom</td><td>Vite</td></tr>
+              <tr><td>08</td><td><strong>3D Product Showcase</strong></td><td>Three.js, PBR Material, Orbit</td><td>Vite</td></tr>
+              <tr><td>09</td><td><strong>Shader Background</strong></td><td>Three.js, GLSL, Simplex Noise</td><td>Vite</td></tr>
+              <tr><td>10</td><td><strong>Interactive 3D Mouse Scene</strong></td><td>Three.js, InstancedMesh, Raycaster</td><td>Vite</td></tr>
+              <tr><td>21</td><td><strong>Scroll Camera Narrative</strong></td><td>Three.js, GSAP, Lenis, ScrollTrigger</td><td>Vite</td></tr>
+              <tr><td>22</td><td><strong>3D Product Spotlight</strong></td><td>Three.js, GSAP, Lenis, ScrollTrigger</td><td>Vite</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3><span class="cat-tag transitions">Transitions</span> View Transitions (4)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Demo</th><th>Tech</th><th>Bundler</th></tr></thead>
+            <tbody>
+              <tr><td>11</td><td><strong>Card Grid Transition</strong></td><td>View Transitions API, CSS</td><td>Static</td></tr>
+              <tr><td>12</td><td><strong>Page Routing Transitions</strong></td><td>View Transitions API, SPA Routing</td><td>Static</td></tr>
+              <tr><td>13</td><td><strong>Theme Transition</strong></td><td>View Transitions API, Clip-Path</td><td>Static</td></tr>
+              <tr><td>14</td><td><strong>Image Gallery Transitions</strong></td><td>View Transitions API, Crossfade</td><td>Static</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3><span class="cat-tag css-canvas">CSS/Canvas</span> CSS / Canvas (6)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Demo</th><th>Tech</th><th>Bundler</th></tr></thead>
+            <tbody>
+              <tr><td>15</td><td><strong>Bokeh Particle Hero</strong></td><td>Canvas 2D, Mouse Parallax</td><td>Static</td></tr>
+              <tr><td>16</td><td><strong>Magnetic Cursor</strong></td><td>Spring Physics, Mouse Tracking</td><td>Static</td></tr>
+              <tr><td>17</td><td><strong>Spotlight Reveal</strong></td><td>CSS Mask, Mouse Tracking</td><td>Static</td></tr>
+              <tr><td>18</td><td><strong>Noise &amp; Grain Overlay</strong></td><td>SVG Filter, Canvas, CSS</td><td>Static</td></tr>
+              <tr><td>19</td><td><strong>Staggered Grid Entrance</strong></td><td>IntersectionObserver, CSS Keyframes</td><td>Static</td></tr>
+              <tr><td>20</td><td><strong>Morphing Blobs</strong></td><td>CSS Border-Radius, SVG Path, Canvas Bezier</td><td>Static</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#9889;</span> Getting Started</h2>
+        <div class="code-block"><code><span class="cm"># Install dependencies (uses bun)</span>
+<span class="fn">bun</span> install
+
+<span class="cm"># Start dev server</span>
+<span class="fn">bun</span> run dev
+
+<span class="cm"># Build for production</span>
+<span class="fn">bun</span> run build</code></div>
+        <p>The gallery opens at <code>http://localhost:5173</code>. Click any demo card to view it.</p>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#9855;</span> Accessibility</h2>
+        <ul>
+          <li><strong style="color:var(--text)">prefers-reduced-motion</strong> &mdash; Detected on load via <code>shared/a11y.js</code>. All animations disable when the OS preference is set.</li>
+          <li><strong style="color:var(--text)">Motion Toggle</strong> &mdash; Each demo has a "Disable/Enable Motion" button that dispatches a <code>motion-preference</code> CustomEvent.</li>
+          <li><strong style="color:var(--text)">Decorative elements</strong> &mdash; All canvases and SVGs use <code>aria-hidden="true"</code>.</li>
+          <li><strong style="color:var(--text)">High contrast</strong> &mdash; Text uses #f0f4fb on #070a12 (17.4:1 ratio).</li>
+          <li><strong style="color:var(--text)">Keyboard</strong> &mdash; ESC returns to gallery from any demo.</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#129302;</span> About the Model</h2>
+        <div class="model-card">
+          <h3>Claude Opus 4.6</h3>
+          <p>This entire project was generated by <strong style="color:var(--text)">Claude Opus 4.6</strong>, Anthropic's most capable AI model. Every HTML file, every JavaScript module, every CSS animation, every GLSL shader.</p>
+          <ul>
+            <li><strong>Code generation</strong> &mdash; Production-quality code across multiple languages and frameworks</li>
+            <li><strong>Architecture design</strong> &mdash; Project structures, patterns, and complex codebase organization</li>
+            <li><strong>Creative implementation</strong> &mdash; Design descriptions translated into working animations, shaders, and interactions</li>
+            <li><strong>Multi-file coordination</strong> &mdash; Consistency across 60+ interconnected files with shared utilities</li>
+          </ul>
+          <p style="margin-top:1rem;">Built through iterative conversation: the user described the desired showcase, and Claude designed the architecture, selected libraries, wrote all code, and verified each demo.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Skill Tab -->
+    <div class="tab-content" id="tab-skill">
+
+      <div class="section">
+        <h2><span class="icon">&#128218;</span> What This Project Is</h2>
+        <p><strong style="color:var(--text)">libs-genclaude</strong> is a curated gallery of 22 web animation demos. Each demo is a self-contained example of a specific animation technique, designed to serve as both a visual showcase and a code reference.</p>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#128736;</span> Technologies &amp; Their Roles</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Technology</th><th>What It Does Here</th></tr></thead>
+            <tbody>
+              <tr><td><strong>GSAP</strong></td><td>Powers all scroll-driven animations. ScrollTrigger pins sections and scrubs timelines. SplitText breaks text into animatable units.</td></tr>
+              <tr><td><strong>Lenis</strong></td><td>Smooth momentum-based scrolling. Integrated with GSAP's ticker for frame-perfect sync.</td></tr>
+              <tr><td><strong>Three.js</strong></td><td>All 3D/WebGL demos. Particle systems, shader materials, PBR rendering, InstancedMesh, post-processing, camera rails.</td></tr>
+              <tr><td><strong>View Transitions API</strong></td><td>Native browser API for DOM state transitions. Page routing, card morphs, theme switching, gallery crossfades.</td></tr>
+              <tr><td><strong>Canvas 2D</strong></td><td>Bokeh particles, grain overlays, bezier blob animation.</td></tr>
+              <tr><td><strong>CSS</strong></td><td>Keyframe animations, border-radius morphing, mask-image spotlight, scanline overlays.</td></tr>
+              <tr><td><strong>Vite</strong></td><td>Dev server with HMR. Multi-page build auto-discovers bundled demos via <code>.vite-demo</code> marker.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#128230;</span> Two Types of Demos</h2>
+
+        <h3>Vite-Bundled (12 demos)</h3>
+        <ul>
+          <li>Contain a <code>.vite-demo</code> marker file in their directory</li>
+          <li>Use ES module <code>import</code> for npm packages</li>
+          <li>Get Vite's HMR, tree-shaking, and module resolution</li>
+          <li>Examples: scroll demos (GSAP + Lenis), 3D demos (Three.js)</li>
+        </ul>
+
+        <h3>Static (10 demos)</h3>
+        <ul>
+          <li>No <code>.vite-demo</code> marker &mdash; plain HTML/CSS/JS</li>
+          <li>Served as-is by Vite's dev server (no bundling)</li>
+          <li>Use native browser APIs or inline implementations</li>
+          <li>Examples: View Transitions, Canvas 2D effects, CSS animations</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#127760;</span> How the Gallery Hub Works</h2>
+        <p><code>index.html</code> is a single-page app with:</p>
+        <ul>
+          <li><strong style="color:var(--text)">Ambient canvas background</strong> &mdash; Floating radial gradient particles with screen blend mode</li>
+          <li><strong style="color:var(--text)">Registry loading</strong> &mdash; Fetches <code>demos/registry.json</code> at startup</li>
+          <li><strong style="color:var(--text)">Dynamic card rendering</strong> &mdash; Creates <code>&lt;a&gt;</code> cards for each "ready" demo</li>
+          <li><strong style="color:var(--text)">Category filtering</strong> &mdash; Buttons filter by scroll, 3d, transitions, css-canvas</li>
+          <li><strong style="color:var(--text)">Staggered entrance</strong> &mdash; Cards fade in with position-based delay</li>
+          <li><strong style="color:var(--text)">Claude badge</strong> &mdash; Floating bottom-right badge with cycling attribution phrases</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#127899;</span> Shared Utility Modules</h2>
+
+        <h3>shared/a11y.js</h3>
+        <ul>
+          <li><code>prefersReducedMotion()</code> &mdash; Returns boolean, reactive to OS setting</li>
+          <li><code>setReducedMotion(bool)</code> &mdash; Programmatic toggle, fires CustomEvent</li>
+          <li><code>createMotionToggle(container)</code> &mdash; Renders toggle button widget</li>
+        </ul>
+
+        <h3>shared/demo-shell.js</h3>
+        <ul>
+          <li><code>initDemoShell({ title, category, tech })</code> &mdash; Injects back link, motion toggle, info bar</li>
+        </ul>
+
+        <h3>shared/colors.js</h3>
+        <ul>
+          <li><code>palette</code> object &mdash; Canonical dark-theme color tokens</li>
+        </ul>
+
+        <h3>shared/motion-tokens.js</h3>
+        <ul>
+          <li><code>durations</code> &mdash; 5 timing presets (fast &rarr; epic)</li>
+          <li><code>easings</code> &mdash; 6 GSAP ease strings</li>
+          <li><code>stagger</code> &mdash; 5 stagger config objects</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2><span class="icon">&#128187;</span> Key Code Patterns</h2>
+
+        <h3>GSAP + Lenis Smooth Scroll</h3>
+        <div class="code-block"><code><span class="kw">import</span> gsap <span class="kw">from</span> <span class="str">'gsap'</span>;
+<span class="kw">import</span> { ScrollTrigger } <span class="kw">from</span> <span class="str">'gsap/ScrollTrigger'</span>;
+<span class="kw">import</span> Lenis <span class="kw">from</span> <span class="str">'lenis'</span>;
+gsap.<span class="fn">registerPlugin</span>(ScrollTrigger);
+<span class="kw">const</span> lenis = <span class="kw">new</span> <span class="fn">Lenis</span>({ lerp: 0.1, smoothWheel: <span class="kw">true</span> });
+lenis.<span class="fn">on</span>(<span class="str">'scroll'</span>, ScrollTrigger.update);
+gsap.ticker.<span class="fn">add</span>((time) => lenis.<span class="fn">raf</span>(time * 1000));
+gsap.ticker.<span class="fn">lagSmoothing</span>(0);</code></div>
+
+        <h3>Three.js Scene with Bloom</h3>
+        <div class="code-block"><code><span class="kw">import</span> * <span class="kw">as</span> THREE <span class="kw">from</span> <span class="str">'three'</span>;
+<span class="kw">import</span> { EffectComposer } <span class="kw">from</span> <span class="str">'three/addons/postprocessing/EffectComposer.js'</span>;
+<span class="kw">import</span> { RenderPass } <span class="kw">from</span> <span class="str">'three/addons/postprocessing/RenderPass.js'</span>;
+<span class="kw">import</span> { UnrealBloomPass } <span class="kw">from</span> <span class="str">'three/addons/postprocessing/UnrealBloomPass.js'</span>;
+
+<span class="kw">const</span> composer = <span class="kw">new</span> <span class="fn">EffectComposer</span>(renderer);
+composer.<span class="fn">addPass</span>(<span class="kw">new</span> <span class="fn">RenderPass</span>(scene, camera));
+composer.<span class="fn">addPass</span>(<span class="kw">new</span> <span class="fn">UnrealBloomPass</span>(res, strength, radius, threshold));</code></div>
+
+        <h3>View Transitions Fallback</h3>
+        <div class="code-block"><code><span class="kw">const</span> supportsVT = <span class="kw">typeof</span> document.startViewTransition === <span class="str">'function'</span>;
+<span class="kw">if</span> (supportsVT && !<span class="fn">prefersReducedMotion</span>()) {
+  document.<span class="fn">startViewTransition</span>(() => <span class="fn">updateDOM</span>());
+} <span class="kw">else</span> {
+  <span class="fn">updateDOM</span>();
+}</code></div>
+
+        <h3>Demo Shell Initialization</h3>
+        <div class="code-block"><code><span class="kw">import</span> { initDemoShell } <span class="kw">from</span> <span class="str">'/shared/demo-shell.js'</span>;
+<span class="kw">import</span> { prefersReducedMotion } <span class="kw">from</span> <span class="str">'/shared/a11y.js'</span>;
+<span class="fn">initDemoShell</span>({ title: <span class="str">'Demo Title'</span>, category: <span class="str">'css-canvas'</span>, tech: [<span class="str">'tag1'</span>] });
+
+<span class="kw">let</span> reduced = <span class="fn">prefersReducedMotion</span>();
+<span class="kw">if</span> (reduced) document.documentElement.classList.<span class="fn">add</span>(<span class="str">'reduced-motion'</span>);
+
+window.<span class="fn">addEventListener</span>(<span class="str">'motion-preference'</span>, (e) => {
+  reduced = e.detail.reduced;
+  <span class="cm">// Start or stop animations based on reduced state</span>
+});</code></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(`tab-${target}`).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
