@@ -3,7 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>libs-genclaude — Web Animation Showcase</title>
+  <title>Web Animation Showcase — GSAP, Three.js, Lenis & Modern CSS</title>
+  <meta name="description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects. Explore 35+ web animation demos built with GSAP, Three.js, Lenis, and modern CSS. Filter by Scroll, 3D/WebGL, Transitions, and CSS/Canvas.">
+  <meta name="keywords" content="web animation, GSAP, Three.js, Lenis, scroll animation, WebGL, view transitions, CSS animation, JavaScript animation">
+  <meta name="author" content="libs-genclaude">
+  <link rel="canonical" href="/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Web Animation Showcase">
+  <meta property="og:description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS. Explore 35+ animation demos.">
+  <meta property="og:image" content="/poster.png">
+  <meta property="og:image:alt" content="Web Animation Showcase — Gallery of scroll animations, 3D WebGL scenes, view transitions, and CSS/Canvas effects">
+  <meta property="og:url" content="/">
+  <meta property="og:site_name" content="Web Animation Showcase">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Animation Showcase">
+  <meta name="twitter:description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS.">
+  <meta name="twitter:image" content="/poster.png">
+  <meta name="twitter:image:alt" content="Web Animation Showcase — Gallery of scroll animations, 3D WebGL scenes, view transitions, and CSS/Canvas effects">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Web Animation Showcase",
+    "description": "Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS. Explore 35+ web animation demos.",
+    "url": "/",
+    "image": "/poster.png",
+    "about": {
+      "@type": "Thing",
+      "name": "Web Animation",
+      "description": "Interactive demos showcasing GSAP scroll animations, Three.js WebGL, View Transitions API, and CSS/Canvas effects"
+    }
+  }
+  </script>
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -188,6 +226,7 @@
     .tag.cat-3d { background: rgba(174, 82, 255, 0.15); color: var(--neon-purple); }
     .tag.cat-transitions { background: rgba(255, 204, 102, 0.15); color: var(--accent-warm); }
     .tag.cat-css-canvas { background: rgba(255, 64, 214, 0.12); color: var(--neon-pink); }
+    .tag.cat-pages { background: rgba(100, 220, 180, 0.15); color: #64dcb4; }
     .tag.tech { background: rgba(255, 255, 255, 0.06); color: var(--muted); }
 
     .card-meta {
@@ -343,9 +382,12 @@
     <button class="filter-btn" data-filter="3d">3D / WebGL</button>
     <button class="filter-btn" data-filter="transitions">Transitions</button>
     <button class="filter-btn" data-filter="css-canvas">CSS / Canvas</button>
+    <button class="filter-btn" data-filter="pages">Pages</button>
   </nav>
 
-  <div class="grid" id="grid"></div>
+  <main>
+    <div class="grid" id="grid"></div>
+  </main>
 
   <footer class="footer">
     libs-genclaude &mdash; Animation explorations
@@ -378,6 +420,7 @@
       '3d': 'cat-3d',
       transitions: 'cat-transitions',
       'css-canvas': 'cat-css-canvas',
+      pages: 'cat-pages',
     };
 
     // ── Load registry and render cards ──
@@ -497,7 +540,7 @@
     const claudePhrases = [
       'Built with Claude Opus 4.6',
       'Every demo crafted by Claude',
-      '22 animations, zero human code',
+      '29 animations, zero human code',
       'From prompt to production',
       'AI-powered web animation',
     ];

@@ -4,7 +4,11 @@
     "title": "Smooth Scroll Story",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "lenis", "scrolltrigger"],
+    "tech": [
+      "gsap",
+      "lenis",
+      "scrolltrigger"
+    ],
     "difficulty": "intermediate",
     "description": "Parallax sections with Lenis smooth scrolling and GSAP ScrollTrigger choreography.",
     "bundler": "vite"
@@ -14,7 +18,11 @@
     "title": "Horizontal Scroll Gallery",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "lenis", "scrolltrigger"],
+    "tech": [
+      "gsap",
+      "lenis",
+      "scrolltrigger"
+    ],
     "difficulty": "intermediate",
     "description": "Vertical scroll drives a horizontal gallery with pinned container and panel entrance animations.",
     "bundler": "vite"
@@ -24,7 +32,11 @@
     "title": "Text Reveal on Scroll",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "splittext", "scrolltrigger"],
+    "tech": [
+      "gsap",
+      "splittext",
+      "scrolltrigger"
+    ],
     "difficulty": "intermediate",
     "description": "Per-character and per-line text animations triggered on scroll with GSAP SplitText.",
     "bundler": "vite"
@@ -34,7 +46,11 @@
     "title": "Pinned Scroll Sections",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "scrolltrigger", "pin"],
+    "tech": [
+      "gsap",
+      "scrolltrigger",
+      "pin"
+    ],
     "difficulty": "intermediate",
     "description": "Sections pin in place while multi-step timelines play, driven entirely by scroll position.",
     "bundler": "vite"
@@ -44,7 +60,11 @@
     "title": "Card Stack Cascade",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "scrolltrigger", "perspective"],
+    "tech": [
+      "gsap",
+      "scrolltrigger",
+      "perspective"
+    ],
     "difficulty": "intermediate",
     "description": "Stacked cards fan out and rearrange into a grid as you scroll, driven by GSAP ScrollTrigger scrub.",
     "bundler": "vite"
@@ -54,7 +74,12 @@
     "title": "Scroll Progress Indicators",
     "category": "scroll",
     "status": "ready",
-    "tech": ["gsap", "lenis", "scrolltrigger", "svg"],
+    "tech": [
+      "gsap",
+      "lenis",
+      "scrolltrigger",
+      "svg"
+    ],
     "difficulty": "beginner",
     "description": "Three simultaneous scroll indicators: top bar, circular SVG progress, and section dot navigator.",
     "bundler": "vite"
@@ -64,7 +89,11 @@
     "title": "Particle Tunnel",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "shaders", "postprocessing"],
+    "tech": [
+      "three.js",
+      "shaders",
+      "postprocessing"
+    ],
     "difficulty": "advanced",
     "description": "Cinematic depth-heavy particle tunnel with custom shaders and bloom post-processing.",
     "bundler": "vite"
@@ -74,7 +103,11 @@
     "title": "3D Product Showcase",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "pbr-material", "orbit"],
+    "tech": [
+      "three.js",
+      "pbr-material",
+      "orbit"
+    ],
     "difficulty": "intermediate",
     "description": "Interactive 3D product viewer with PBR materials, three-point lighting, and orbit controls.",
     "bundler": "vite"
@@ -84,7 +117,11 @@
     "title": "Shader Background",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "glsl", "simplex-noise"],
+    "tech": [
+      "three.js",
+      "glsl",
+      "simplex-noise"
+    ],
     "difficulty": "advanced",
     "description": "Full-screen GLSL fragment shader with layered simplex noise creating flowing aurora bands.",
     "bundler": "vite"
@@ -94,7 +131,11 @@
     "title": "Interactive 3D Mouse Scene",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "instanced-mesh", "raycaster"],
+    "tech": [
+      "three.js",
+      "instanced-mesh",
+      "raycaster"
+    ],
     "difficulty": "advanced",
     "description": "Grid of 400 spheres with mouse-reactive repulsion physics, spring return, and distance-based color.",
     "bundler": "vite"
@@ -104,7 +145,10 @@
     "title": "Card Grid Transition",
     "category": "transitions",
     "status": "ready",
-    "tech": ["view-transitions-api", "css"],
+    "tech": [
+      "view-transitions-api",
+      "css"
+    ],
     "difficulty": "intermediate",
     "description": "Shared-element transition from a card grid to a detail page using the View Transitions API.",
     "bundler": "static"
@@ -114,7 +158,10 @@
     "title": "Page Routing Transitions",
     "category": "transitions",
     "status": "ready",
-    "tech": ["view-transitions-api", "spa-routing"],
+    "tech": [
+      "view-transitions-api",
+      "spa-routing"
+    ],
     "difficulty": "intermediate",
     "description": "SPA-style page routing with directional slide transitions using the View Transitions API.",
     "bundler": "static"
@@ -124,7 +171,10 @@
     "title": "Theme Transition",
     "category": "transitions",
     "status": "ready",
-    "tech": ["view-transitions-api", "clip-path"],
+    "tech": [
+      "view-transitions-api",
+      "clip-path"
+    ],
     "difficulty": "intermediate",
     "description": "Dark/light theme toggle with circular clip-path wipe powered by the View Transitions API.",
     "bundler": "static"
@@ -134,7 +184,10 @@
     "title": "Image Gallery Transitions",
     "category": "transitions",
     "status": "ready",
-    "tech": ["view-transitions-api", "crossfade"],
+    "tech": [
+      "view-transitions-api",
+      "crossfade"
+    ],
     "difficulty": "beginner",
     "description": "Thumbnail strip with hero image swap animated by View Transitions crossfade and scale.",
     "bundler": "static"
@@ -144,7 +197,10 @@
     "title": "Bokeh Particle Hero",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["canvas-2d", "vanilla-js"],
+    "tech": [
+      "canvas-2d",
+      "vanilla-js"
+    ],
     "difficulty": "beginner",
     "description": "Ambient glowing bokeh particle field with mouse-reactive parallax and depth-of-field blur.",
     "bundler": "static"
@@ -154,7 +210,10 @@
     "title": "Magnetic Cursor",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["vanilla-js", "spring-physics"],
+    "tech": [
+      "vanilla-js",
+      "spring-physics"
+    ],
     "difficulty": "intermediate",
     "description": "Custom cursor with spring-based following and magnetic attraction to interactive elements.",
     "bundler": "static"
@@ -164,7 +223,10 @@
     "title": "Spotlight Reveal",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["css-mask", "mouse-tracking"],
+    "tech": [
+      "css-mask",
+      "mouse-tracking"
+    ],
     "difficulty": "intermediate",
     "description": "Mouse-driven spotlight that reveals colorful hidden content through a dark overlay using CSS masks.",
     "bundler": "static"
@@ -174,7 +236,11 @@
     "title": "Noise & Grain Overlay",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["svg-filter", "canvas", "css"],
+    "tech": [
+      "svg-filter",
+      "canvas",
+      "css"
+    ],
     "difficulty": "beginner",
     "description": "Four composited overlay effects: SVG noise filter, canvas grain, CSS scanlines, and radial vignette.",
     "bundler": "static"
@@ -184,7 +250,10 @@
     "title": "Staggered Grid Entrance",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["intersection-observer", "css-keyframes"],
+    "tech": [
+      "intersection-observer",
+      "css-keyframes"
+    ],
     "difficulty": "beginner",
     "description": "Grid items animate in with position-based stagger delays. Multiple animation styles: fade, scale, slide, flip.",
     "bundler": "static"
@@ -194,7 +263,11 @@
     "title": "Morphing Blobs",
     "category": "css-canvas",
     "status": "ready",
-    "tech": ["css-border-radius", "svg-path", "canvas-bezier"],
+    "tech": [
+      "css-border-radius",
+      "svg-path",
+      "canvas-bezier"
+    ],
     "difficulty": "beginner",
     "description": "Three approaches to organic shape animation: CSS border-radius, SVG path morphing, and Canvas bezier curves.",
     "bundler": "static"
@@ -204,7 +277,12 @@
     "title": "Scroll Camera Narrative",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "gsap", "lenis", "scrolltrigger"],
+    "tech": [
+      "three.js",
+      "gsap",
+      "lenis",
+      "scrolltrigger"
+    ],
     "difficulty": "advanced",
     "description": "Scroll through story chapters as the camera flies between 3D scene waypoints with cinematic transitions.",
     "bundler": "vite"
@@ -214,9 +292,189 @@
     "title": "3D Product Spotlight",
     "category": "3d",
     "status": "ready",
-    "tech": ["three.js", "gsap", "lenis", "scrolltrigger"],
+    "tech": [
+      "three.js",
+      "gsap",
+      "lenis",
+      "scrolltrigger"
+    ],
     "difficulty": "advanced",
     "description": "Scroll-driven camera orbits a 3D product on rails, revealing feature cards at each angle.",
+    "bundler": "vite"
+  },
+  {
+    "id": "23-product-page",
+    "title": "Product Landing Page",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "three.js",
+      "gsap",
+      "lenis",
+      "splittext",
+      "scrolltrigger"
+    ],
+    "difficulty": "advanced",
+    "description": "Apple-style wireless earbuds product page with 3D hero, scroll-pinned feature reveals, and cinematic text choreography.",
+    "bundler": "vite"
+  },
+  {
+    "id": "24-ai-portfolio",
+    "title": "AI Engineer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "canvas-2d",
+      "gsap",
+      "scrambletext",
+      "lenis",
+      "scrolltrigger"
+    ],
+    "difficulty": "advanced",
+    "description": "Terminal-aesthetic portfolio with typing animations, neural network canvas visualization, and scroll-driven project reveals.",
+    "bundler": "vite"
+  },
+  {
+    "id": "25-editorial-story",
+    "title": "Travel Editorial",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "gsap",
+      "flip",
+      "lenis",
+      "scrolltrigger",
+      "view-transitions-api"
+    ],
+    "difficulty": "advanced",
+    "description": "Immersive travel editorial with horizontal photo scrolling, FLIP layout transitions, and warm typographic design.",
+    "bundler": "vite"
+  },
+  {
+    "id": "26-travel-experience",
+    "title": "Travel Experience",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "three.js",
+      "gsap",
+      "lenis",
+      "scrolltrigger",
+      "scrambletext"
+    ],
+    "difficulty": "advanced",
+    "description": "Immersive travel booking experience with a scroll-driven 3D airplane flight path and animated destination reveals.",
+    "bundler": "vite"
+  },
+  {
+    "id": "27-blog-magazine",
+    "title": "Blog Magazine",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "gsap",
+      "lenis",
+      "splittext",
+      "view-transitions-api"
+    ],
+    "difficulty": "advanced",
+    "description": "Modern blog layout with dark/light theme transitions, animated typography, and reading-view article cards.",
+    "bundler": "vite"
+  },
+  {
+    "id": "28-saas-landing",
+    "title": "SaaS Landing Page",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "gsap",
+      "lenis",
+      "scrolltrigger",
+      "splittext"
+    ],
+    "difficulty": "advanced",
+    "description": "Professional SaaS product page with CSS device mockups, pinned feature sections, pricing cards, and testimonial animations.",
+    "bundler": "vite"
+  },
+  {
+    "id": "29-ecommerce-grid",
+    "title": "E-commerce Shop",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "gsap",
+      "flip",
+      "lenis",
+      "view-transitions-api",
+      "scrolltrigger"
+    ],
+    "difficulty": "advanced",
+    "description": "Mini e-commerce experience with filterable product grid, FLIP animations, cart interactions, and View Transition detail pages.",
+    "bundler": "vite"
+  },
+  {
+    "id": "30-software-portfolio",
+    "title": "Software Engineer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": [
+      "gsap",
+      "lenis",
+      "scrolltrigger",
+      "splittext"
+    ],
+    "difficulty": "advanced",
+    "description": "Dark brutalist software engineer portfolio with bold typography, scroll-driven section reveals, skill bars, and project showcases.",
+    "bundler": "vite"
+  },
+  {
+    "id": "31-uxui-portfolio",
+    "title": "UX/UI Designer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "lenis", "scrolltrigger", "splittext", "view-transitions-api"],
+    "difficulty": "advanced",
+    "description": "Warm editorial UX/UI designer portfolio with GSAP SplitText hero, rotating role words, View Transitions case study overlay, and scroll-driven section reveals.",
+    "bundler": "vite"
+  },
+  {
+    "id": "32-tech-portfolio",
+    "title": "Tech Lead Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["three.js", "gsap", "lenis", "scrolltrigger", "splittext"],
+    "difficulty": "advanced",
+    "description": "Corporate tech lead portfolio with Three.js wireframe hero, vertical career timeline, expertise grid, and open source repo showcase.",
+    "bundler": "vite"
+  },
+  {
+    "id": "33-ai-engineer",
+    "title": "AI Engineer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["three.js", "gsap", "lenis", "scrolltrigger", "scrambletext", "canvas-2d"],
+    "difficulty": "advanced",
+    "description": "Futuristic AI research engineer portfolio with Three.js neural network particle simulation, live training loss curve canvas animation, confusion matrix heatmap, and terminal-style tech stack reveal.",
+    "bundler": "vite"
+  },
+  {
+    "id": "34-multimedia-portfolio",
+    "title": "Multimedia Engineer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "flip", "canvas-2d", "lenis", "scrolltrigger"],
+    "difficulty": "advanced",
+    "description": "Bold creative technologist portfolio with Canvas 2D particle waveform reacting to mouse, GSAP FLIP grid/list gallery toggle, discipline pills ticker, audio waveform visualizer, and glitch-hover name effect.",
+    "bundler": "vite"
+  },
+  {
+    "id": "35-gamedev-portfolio",
+    "title": "Game Developer Portfolio",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["canvas-2d", "gsap", "lenis", "view-transitions-api", "css-animation"],
+    "difficulty": "advanced",
+    "description": "Retro pixel art game developer portfolio with CRT scanlines, canvas starfield + animated pixel character, HUD-style stat bars, game cartridge cards, and inventory skill items.",
     "bundler": "vite"
   }
 ]
