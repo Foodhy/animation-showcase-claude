@@ -476,5 +476,135 @@
     "difficulty": "advanced",
     "description": "Retro pixel art game developer portfolio with CRT scanlines, canvas starfield + animated pixel character, HUD-style stat bars, game cartridge cards, and inventory skill items.",
     "bundler": "vite"
+  },
+  {
+    "id": "36-scroll-linked-counters",
+    "title": "Scroll-Linked Number Counters",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "textplugin", "lenis"],
+    "difficulty": "beginner",
+    "description": "Numeric metrics animate from 0 to target as you scroll. Counter speed is directly linked to scroll position using GSAP ScrollTrigger scrub.",
+    "bundler": "vite"
+  },
+  {
+    "id": "37-gradient-text-scroll",
+    "title": "Gradient Text Hue Shift",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "css-variables", "lenis"],
+    "difficulty": "beginner",
+    "description": "Text with animated gradient background that shifts hue and saturation as you scroll. Uses CSS Custom Properties updated in real-time by GSAP ScrollTrigger.",
+    "bundler": "vite"
+  },
+  {
+    "id": "38-parallax-depth-cards",
+    "title": "Parallax Depth Card Grid",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "css-3d", "perspective", "lenis"],
+    "difficulty": "intermediate",
+    "description": "Cards positioned at different Z-depth layers reveal with staggered 3D entrance animations. Hover lifts cards forward. Depth-based scroll parallax creates cinematic feel.",
+    "bundler": "vite"
+  },
+  {
+    "id": "39-velocity-scroll-effect",
+    "title": "Velocity-Aware Scroll + Speed Lines",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["lenis", "gsap", "canvas-2d", "velocity"],
+    "difficulty": "intermediate",
+    "description": "Canvas speed lines radiate from center and intensify based on how fast you scroll. Lenis velocity data drives line count, length, and opacity in real-time.",
+    "bundler": "vite"
+  },
+  {
+    "id": "40-svg-workflow-animation",
+    "title": "SVG Workflow Animation",
+    "category": "scroll",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "svg", "stroke-dasharray", "lenis"],
+    "difficulty": "intermediate",
+    "description": "SVG connector paths draw themselves as you scroll using stroke-dasharray/dashoffset technique. Workflow nodes and labels appear in sequence with scroll-triggered reveals.",
+    "bundler": "vite"
+  },
+  {
+    "id": "41-data-dashboard",
+    "title": "Data Dashboard",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "canvas-2d", "scrolltrigger", "lenis", "textplugin"],
+    "difficulty": "advanced",
+    "description": "Startup metrics dashboard with scroll-linked number counters, gradient text hue-shift hero, animated Canvas 2D bar/donut/area charts, a milestone timeline, and team grid.",
+    "bundler": "vite"
+  },
+  {
+    "id": "42-interactive-case-study",
+    "title": "Interactive Case Study",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "svg", "flip", "lenis"],
+    "difficulty": "advanced",
+    "description": "Digital agency case study page integrating parallax depth hero cards, scroll-driven SVG workflow diagram, animated result counters, and staggered testimonial reveals.",
+    "bundler": "vite"
+  },
+  {
+    "id": "43-premium-velocity-experience",
+    "title": "Premium Velocity Experience",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["three.js", "lenis", "gsap", "canvas-2d", "velocity"],
+    "difficulty": "advanced",
+    "description": "Three-layer rendering showcase: Three.js wireframe hero reacting to scroll, Canvas 2D radial speed lines intensifying with scroll velocity, and gradient text hue-shift — all synchronized.",
+    "bundler": "vite"
+  },
+  {
+    "id": "44-restaurant-fine-dining",
+    "title": "Fine Dining Restaurant",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "lenis", "splittext", "playfair-display"],
+    "difficulty": "advanced",
+    "description": "Warm editorial restaurant page with cream/terracotta palette, Playfair Display serif typography, SplitText char-by-char hero entrance, menu section with parallax images, and a vintage story section.",
+    "bundler": "vite"
+  },
+  {
+    "id": "45-fitness-brand",
+    "title": "Fitness Brand",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "lenis", "barlow-condensed"],
+    "difficulty": "advanced",
+    "description": "High-impact brutalist fitness brand with pure black/yellow palette, 14vw condensed headings, scrolling ticker, stat counters with yellow border, and programs grid with zero-gap dividers.",
+    "bundler": "vite"
+  },
+  {
+    "id": "46-real-estate",
+    "title": "Real Estate — Light Minimal",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "lenis", "fraunces", "inter"],
+    "difficulty": "intermediate",
+    "description": "Light-mode architectural property site with warm grey palette, Fraunces italic display and Inter body fonts, split hero with parallax image stack, listings grid with filter bar, and dark contact section.",
+    "bundler": "vite"
+  },
+  {
+    "id": "47-music-platform",
+    "title": "FREQ — Music & Podcast Platform",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "lenis", "canvas-2d", "space-mono"],
+    "difficulty": "advanced",
+    "description": "Neon cyberpunk music platform with magenta/cyan palette, Space Mono monospace typography, animated Canvas 2D waveform background, scrolling artist marquee, chart bars with glitch hover, and typing terminal CTA.",
+    "bundler": "vite"
+  },
+  {
+    "id": "48-photography-portfolio",
+    "title": "Photography Portfolio — Dark Film",
+    "category": "pages",
+    "status": "ready",
+    "tech": ["gsap", "scrolltrigger", "lenis", "eb-garamond", "geist-mono"],
+    "difficulty": "advanced",
+    "description": "Dark film-aesthetic photography portfolio with warm black/gold palette, grain overlay, EB Garamond serif italic typography, masonry photo grid with parallax hover, and series list with staggered reveals.",
+    "bundler": "vite"
   }
 ]

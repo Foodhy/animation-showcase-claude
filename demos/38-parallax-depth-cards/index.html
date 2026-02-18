@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Depth Card Grid — libs-genclaude</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/shared/demo-shell.css">
+</head>
+<body>
+  <section class="hero">
+    <div class="content">
+      <span class="eyebrow">Demo 38</span>
+      <h1>Parallax Depth Card Grid</h1>
+      <p class="subtitle">Cards positioned at different depth layers, staggered entrance with perspective. Creates a cinematic 3D effect without using WebGL.</p>
+    </div>
+  </section>
+
+  <section class="cards-container">
+    <div class="cards-grid">
+      <div class="card" style="--depth: 0.8; --index: 0;">
+        <div class="card-inner">
+          <div class="card-icon">◆</div>
+          <h3>Strategic Vision</h3>
+          <p>Cards recede into the distance with layered transforms, creating depth.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--depth: 0.6; --index: 1;">
+        <div class="card-inner">
+          <div class="card-icon">▲</div>
+          <h3>Cinematic Feel</h3>
+          <p>Rotation and scale based on depth position for premium impression.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--depth: 0.4; --index: 2;">
+        <div class="card-inner">
+          <div class="card-icon">●</div>
+          <h3>Smooth Stagger</h3>
+          <p>Each card enters in sequence with customized delay and easing.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--depth: 0.7; --index: 3;">
+        <div class="card-inner">
+          <div class="card-icon">■</div>
+          <h3>Responsive</h3>
+          <p>Parallax depth scales gracefully on mobile without performance hit.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--depth: 0.5; --index: 4;">
+        <div class="card-inner">
+          <div class="card-icon">✦</div>
+          <h3>Hover Interaction</h3>
+          <p>Cards lift forward on hover, responding to mouse position.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--depth: 0.9; --index: 5;">
+        <div class="card-inner">
+          <div class="card-icon">◈</div>
+          <h3>CSS 3D Transforms</h3>
+          <p>Pure CSS perspective without JavaScript for depth effects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="content">
+      <h2>How It Works</h2>
+      <p>Each card has a <code>--depth</code> CSS variable that controls its position in 3D space. GSAP animates:</p>
+      <ul>
+        <li><strong>Transform:</strong> scaleZ, translateZ for depth positioning</li>
+        <li><strong>Opacity:</strong> Cards closer to viewer are more opaque</li>
+        <li><strong>Blur:</strong> Optional blur increases with distance (atmospheric perspective)</li>
+        <li><strong>Delay:</strong> Each card stagger is calculated from its depth value</li>
+      </ul>
+
+      <h3>Technique Stack</h3>
+      <p>This uses CSS 3D transforms with <code>perspective</code> container, GSAP for entrance choreography, and ScrollTrigger for scroll-based reveal. Hover states add interactivity.</p>
+
+      <a href="/" class="btn-back">Back to Showcase</a>
+    </div>
+  </section>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
