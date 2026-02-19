@@ -2,7 +2,7 @@
 
 ## Your Role
 
-You are maintaining and extending a **web animation showcase** project. The project contains 20 self-contained animation demos organized into 4 categories, served via a Vite dev server with a filterable gallery hub.
+You are maintaining and extending **stealthisdesign**, a web animation showcase where anyone can view and modify any project. The project contains 20 self-contained animation demos organized into 4 categories, served via a Vite dev server with a filterable gallery hub.
 
 ## Architecture Quick Reference
 

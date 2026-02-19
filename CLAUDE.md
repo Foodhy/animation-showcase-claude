@@ -4,7 +4,7 @@ This file provides context for future Claude sessions working on this project.
 
 ## Project Overview
 
-**libs-genclaude** is a web animation showcase with 22 self-contained demos across 4 categories: scroll animations, 3D/WebGL, View Transitions, and CSS/Canvas effects. It serves as a reference library of animation techniques.
+**stealthisdesign** is a web animation showcase with self-contained demos across 4 categories: scroll animations, 3D/WebGL, View Transitions, and CSS/Canvas effects. Anyone can view and modify any project to their liking — all open source.
 
 ## Architecture
 

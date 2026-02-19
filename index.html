@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Animation Showcase — GSAP, Three.js, Lenis & Modern CSS</title>
-  <meta name="description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects. Explore 35+ web animation demos built with GSAP, Three.js, Lenis, and modern CSS. Filter by Scroll, 3D/WebGL, Transitions, and CSS/Canvas.">
+  <title>stealthisdesign — Web Animation Showcase · View &amp; Modify Any Project</title>
+  <meta name="description" content="stealthisdesign — View and modify any project. Scroll choreography, 3D scenes, view transitions, and cinematic effects. Explore 35+ web animation demos built with GSAP, Three.js, Lenis, and modern CSS. Open source, fork and customize.">
   <meta name="keywords" content="web animation, GSAP, Three.js, Lenis, scroll animation, WebGL, view transitions, CSS animation, JavaScript animation">
-  <meta name="author" content="libs-genclaude">
+  <meta name="author" content="stealthisdesign">
   <link rel="canonical" href="/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Web Animation Showcase">
-  <meta property="og:description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS. Explore 35+ animation demos.">
+  <meta property="og:title" content="stealthisdesign — View &amp; Modify Any Project">
+  <meta property="og:description" content="View, explore, and modify any project to your liking. 35+ web animation demos — GSAP, Three.js, Lenis, modern CSS. Open source.">
   <meta property="og:image" content="/poster.png">
   <meta property="og:image:alt" content="Web Animation Showcase — Gallery of scroll animations, 3D WebGL scenes, view transitions, and CSS/Canvas effects">
   <meta property="og:url" content="/">
-  <meta property="og:site_name" content="Web Animation Showcase">
+  <meta property="og:site_name" content="stealthisdesign">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Web Animation Showcase">
-  <meta name="twitter:description" content="Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS.">
+  <meta name="twitter:title" content="stealthisdesign — View &amp; Modify Any Project">
+  <meta name="twitter:description" content="View, explore, and modify any project to your liking. 35+ web animation demos — open source.">
   <meta name="twitter:image" content="/poster.png">
   <meta name="twitter:image:alt" content="Web Animation Showcase — Gallery of scroll animations, 3D WebGL scenes, view transitions, and CSS/Canvas effects">
 
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Web Animation Showcase",
-    "description": "Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS. Explore 35+ web animation demos.",
+    "name": "stealthisdesign",
+    "description": "View, explore, and modify any project to your liking. 35+ web animation demos — GSAP, Three.js, Lenis, modern CSS. Open source.",
     "url": "/",
     "image": "/poster.png",
     "about": {
@@ -362,8 +362,8 @@
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
   <header class="header">
-    <h1>Web Animation Showcase</h1>
-    <p class="subtitle">Scroll choreography, 3D scenes, view transitions, and cinematic effects — built with GSAP, Three.js, Lenis, and modern CSS.</p>
+    <h1>stealthisdesign</h1>
+    <p class="subtitle">View, explore, and modify any project to your liking. Scroll choreography, 3D scenes, view transitions, and cinematic effects — all open source.</p>
     <div class="header-links">
       <a href="/about/" class="github-link">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412l-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.399l-.262 0-.062-.293 1.981-.502.339 0-.293 1.375zM8.5 5.5a1 1 0 11-2 0 1 1 0 012 0z" fill="currentColor"/></svg>
@@ -390,7 +390,7 @@
   </main>
 
   <footer class="footer">
-    libs-genclaude &mdash; Animation explorations
+    stealthisdesign &mdash; View, explore, and modify any project
   </footer>
 
   <!-- Claude floating badge -->
@@ -410,7 +410,7 @@
         <circle cx="30" cy="30" r="3" fill="#ffffff" opacity="0.9"/>
       </svg>
     </div>
-    <span class="claude-phrase" id="claude-phrase">Built with Claude Opus 4.6</span>
+    <span class="claude-phrase" id="claude-phrase">View any project · Modify to your liking</span>
   </div>
 
   <script type="module">
@@ -536,13 +536,12 @@
       raf = requestAnimationFrame(renderBg);
     }
 
-    // ── Claude badge phrase cycling ──
+    // ── Badge phrase cycling ──
     const claudePhrases = [
-      'Built with Claude Opus 4.6',
-      'Every demo crafted by Claude',
-      '29 animations, zero human code',
-      'From prompt to production',
-      'AI-powered web animation',
+      'View any project · Modify to your liking',
+      'Open source · Fork and customize',
+      '35+ animation demos · All yours to tweak',
+      'stealthisdesign',
     ];
     const phraseEl = document.getElementById('claude-phrase');
     let phraseIndex = 0;
